@@ -24,3 +24,4 @@
 - O que é NPM: Node Package Manager.
 - Protocolo http: Protocolo que determina as regras das requisições e respostas da WEB.
 - Métodos http (GET, POST, PUT, PATCH, DELETE): GET usado para obter dados da API, POST usado para enviar dados, PUT edita dados, PATCH edita parcialmente alguns dados
+- Como mudar o formato de importação/exportação de require para import: Adicionar no package.json a propriedade type module e mudar de "require" para "import ... from ..."
