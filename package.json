@@ -5,7 +5,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "node",
+    "express",
+    "prisma",
+    "zod",
+    "mysql"
+  ],
   "author": "Eduarda Oliveira Casado",
   "license": "ISC",
-  "description": ""
+  "description": "API Backend com Express, Prisma e Zod",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
