@@ -16,9 +16,11 @@
 
 # Tópicos Importantes
 
-- O que é framework
-- O que é JavaScript
-- O que é node.js
-- O que é o Express
-- Protocolo http
-- Métodos http (GET, POST, PUT, PATCH, DELETE)
+- O que é framework: Conjunto de recursos/ferramentas para resolver um problema.
+- O que é JavaScript: Linguagem de programação popular para WEB.
+- O que é node.js: Ambiente/runtime que roda o JavaScript no terminal/servidor.
+- O que é o Express: É um framework para desenvolver o back-end do site.
+- API: Conjunto de rotas que dá uma resposta ao usuário.
+- O que é NPM: Node Package Manager.
+- Protocolo http: Protocolo que determina as regras das requisições e respostas da WEB.
+- Métodos http (GET, POST, PUT, PATCH, DELETE): GET usado para obter dados da API, POST usado para enviar dados, PUT edita dados, PATCH edita parcialmente alguns dados
