@@ -36,3 +36,7 @@ app.post('/produto', (req, res) => {
 - Método criar/inserir: POST
 - Rota ou endereço: /produto
 - Tipo de resposta: json
+
+# Notas
+
+- Para que serve o Router do Framework Express? ...Organização do código e facilidade de manutenção, por separar as rotas

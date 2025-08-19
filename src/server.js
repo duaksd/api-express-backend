@@ -1,30 +1,19 @@
-import express from 'express';
+import express from 'express' 
+import profileRouter from './routers/profileRouter.js'
+import productRouter from './routers/productRouter.js'
+import supplierRouter from './routers/supplierRouter.js'
+import carRouter from './routers/carRouter.js'
 
-const app = express();
-app.use(express.json());
+const app = express()
+const port = 3333
 
-let profiles = [];
-let id = 1;
+app.use(express.json())
 
-app.post('/profile', (req, res) => {
-  const profile = { id: id++, ...req.body };
-  profiles.push(profile);
-  res.status(201).json(profile);
-});
+app.use('/profile', profileRouter)
+app.use('/product', productRouter)
+app.use('/supplier', supplierRouter)
+app.use('/car', carRouter)
 
-app.get('/profile', (req, res) => res.json(profiles));
-
-app.put('/profile/:id', (req, res) => {
-  const i = profiles.findIndex(p => p.id == req.params.id);
-  if (i === -1) return res.sendStatus(404);
-  profiles[i] = { ...profiles[i], ...req.body };
-  res.json(profiles[i]);
-});
-
-app.delete('/profile/:id', (req, res) => {
-  profiles = profiles.filter(p => p.id != req.params.id);
-  res.sendStatus(204);
-});
-
-app.listen(3000);
-console.log('Servidor rodando em http://localhost:3000');
+app.listen(port, () => {
+  console.log(`API Rodando em http://localhost:${port}`)
+})
