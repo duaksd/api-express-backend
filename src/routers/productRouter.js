@@ -1,12 +1,17 @@
 import { Router } from 'express'
+import { createProductController } from '../controllers/product/createProductController.js'
+import { listProductController } from '../controllers/product/listProductController.js'
+import { getByIdProductController } from '../controllers/product/getByIdProductController.js'
+import { editProductController } from '../controllers/product/editProductController.js'
+import { deleteProductController } from '../controllers/product/deleteProductController.js'
 
-const router = Router()
+const router = express.Router()
 
-// Rota POST para criar produto
-router.post('/', (req, res) => {
-  const { marca, modelo } = req.body
-  const novoProduto = { id: Date.now(), marca, modelo }
-  res.status(201).json({ message: 'Produto criado com sucesso!', produto: novoProduto })
-})
+router.post('/', createProductController)
+router.get('/', listProductController)
+router.get('/:id', getByIdProductController)
+router.put('/:id', editProductController)
+router.delete('/:id', deleteProductController)
+
 
 export default router  

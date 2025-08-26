@@ -27,7 +27,7 @@
 - Como mudar o formato de importação/exportação de require para import: Adicionar no package.json a propriedade type module e mudar de "require" para "import ... from ...".
 - "--watch": "Observar". Parametro para rodar um js em modo dev, que permite rodar novamente o script quando algum arquivo é alterado. Mudou o código e salvou = ele reinicia o server. Em caso de erro, ele não reinicia.
 
-# Sintaze básica de uma rota da API. Exemplo:
+# Sintaxe básica de uma rota da API. Exemplo:
 
 app.post('/produto', (req, res) => {
     res.json({message: 'Criado com sucesso!'})
@@ -39,4 +39,9 @@ app.post('/produto', (req, res) => {
 
 # Notas
 
-- Para que serve o Router do Framework Express? ...Organização do código e facilidade de manutenção, por separar as rotas
+- Para que serve o Router do Framework Express? ...Organização do código e facilidade de manutenção, por separar as rotas.
+- Apenas "/" no router para não repetir (ex ERRADO: /product?).
+- ":id" é o parâmetro.
+- Padrão de Projeto (Design Pattern) => Forma de CODIFICAR que é amplamente conhecida. Própria comunidade padroniza. (Em equipe, arquiteto de Software na decisão). WEB DESIGN => PROJETO WEB; Design = Projeto.
+- MVC = Model View Controller. Organiza o código, separando-o em três camadas. Modelo, visão e controle. MODEL = 2 funcionalidades. Acesso e manipulação dos dados (cadastrar/editar/excluir) e definição de regras de negócio; VIEW = Apresentação/visualização para o usuário; CONTROLLER = Vai USAR as funções. Controlador de entrada (parâmetros de URL, req, body... etc), processamento (validar... etc) e saída de dados.
+- Exemplo de regras de negócio: número mínimo de caracteres.
